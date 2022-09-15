@@ -9,9 +9,7 @@ class androidd extends StatefulWidget {
 }
 
 class _androiddState extends State<androidd> {
-  String samsung = "";
-  String huawei = "";
-  String redmi = "";
+  String phone = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +18,7 @@ class _androiddState extends State<androidd> {
         decoration: BoxDecoration(
             image: DecorationImage(
                 image: NetworkImage(
-                    "https://i.pinimg.com/564x/2d/67/f9/2d67f9834649b584682ab58606f5a27e.jpg"),
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/1745px-Android_robot.svg.png"),
                 fit: BoxFit.cover)),
         child: ListView(
           children: [
@@ -43,12 +41,11 @@ class _androiddState extends State<androidd> {
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               subtitle: Text(" Memory:256GB RAM:8GB "),
-              value: samsung,
-              toggleable: true,
-              groupValue: samsung,
+              value: "samsung",
+              groupValue: phone,
               onChanged: ((value) {
                 setState(() {
-                  samsung = value.toString();
+                  value = value.toString();
                 });
               }),
             ),
@@ -60,11 +57,11 @@ class _androiddState extends State<androidd> {
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               subtitle: Text(" Memory:128 RAM:6GB "),
-              value: huawei,
-              groupValue: huawei,
+              value: "huawei",
+              groupValue: phone,
               onChanged: ((val) {
                 setState(() {
-                  huawei = val.toString();
+                  phone = val.toString();
                 });
               }),
             ),
@@ -76,11 +73,11 @@ class _androiddState extends State<androidd> {
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               subtitle: Text(" Memory:512 RAM:12GB "),
-              value: redmi,
-              groupValue: '',
+              value: "redmi",
+              groupValue: phone,
               onChanged: ((val) {
                 setState(() {
-                  redmi = val.toString();
+                  val = val.toString();
                 });
               }),
             ),
